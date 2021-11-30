@@ -1,8 +1,7 @@
+#!/usr/bin/env python3
+
 import requests
-import os
 import sys
-from dotenv import load_dotenv
-load_dotenv()
 
 BOLD = '\033[1m'
 BOLD_END = '\033[0m'
