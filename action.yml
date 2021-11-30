@@ -1,0 +1,21 @@
+# action.yml
+name: 'Heroku variables comparator'
+description: 'Allows to compare Heroku variables from two different apps'
+inputs:
+  HEROKU_API_KEY:
+    description: 'Heroku API key'
+    required: true
+  APP_1:
+    description: 'App1 name'
+    required: true
+  APP_2:
+    description: 'App2 name'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.HEROKU_API_KEY } }
+    - ${{ inputs.APP_1 }}
+    - ${{ inputs.APP_2 }}
