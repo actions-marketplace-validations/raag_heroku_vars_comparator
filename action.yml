@@ -16,6 +16,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.HEROKU_API_KEY}}
-    - ${{ inputs.APP_1}}
-    - ${{ inputs.APP_2}}
+    - ${{ inputs.HEROKU_API_KEY }}
+    - ${{ inputs.APP_1 }}
+    - ${{ inputs.APP_2 }}
