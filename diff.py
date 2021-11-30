@@ -7,9 +7,14 @@ load_dotenv()
 BOLD = '\033[1m'
 BOLD_END = '\033[0m'
 
-APP1 = os.environ['APP1']
-APP2 = os.environ['APP2']
-HEROKU_API_KEY = os.environ['HEROKU_API_KEY']
+
+if len(sys.argv) < 4:
+	print('Usage: diff.py <heroku_api_key> <app1> <app2>')
+	sys.exit(1)
+
+HEROKU_API_KEY = sys.argv[1]
+APP1 = sys.argv[2]
+APP2 = sys.argv[3]
 
 
 def get_heroku_vars_diff(app1, app2):
