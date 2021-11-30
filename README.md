@@ -18,8 +18,10 @@ Allows to compare Heroku variables from two different apps.
 
 ## Example usage
 
-uses: raag/heroku_vars_comparator@v1
+```
+uses: raag/heroku_vars_comparator@v1.0.2
 with:
   HEROKU_API_KEY: '[YOUR_API_KEY]'
   APP_1: 'app1'
   APP_2: 'app2'
+```
